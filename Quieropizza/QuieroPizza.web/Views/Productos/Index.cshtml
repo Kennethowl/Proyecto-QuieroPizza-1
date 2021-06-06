@@ -6,21 +6,21 @@
 
 <h2>Productos</h2>
 
-@foreach (var producto in Model)
-{
-
-    <p>@producto.Codigo @producto.Descripcion</p>
-
-    /*<table>
-        <tr>
-            <td><strong>Codigo</strong></td>
-            <td><strong>Descripcion</strong></td>
-        </tr>
-        <tr>
-            <td>@producto.Codigo</td>
-            <td>@producto.Descripcion</td>
-        </tr>
-    </table>*/
-
-}
-
+<!--<details>
+    <summary>Tabla de Productos</summary>-->
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th><strong>Codigo</strong></th>
+                    <th><strong>Descripcion</strong></th>
+                </tr>
+            </thead>
+            @foreach (var producto in Model)
+            {
+                <tr>
+                    <td>@producto.Codigo</td>
+                    <td>@producto.Descripcion</td>
+                </tr>
+            }
+        </table>
+<!--</details>-->
